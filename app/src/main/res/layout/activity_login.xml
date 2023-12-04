@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#0C8A7E"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/fondo"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/mainImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/login" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:background="@drawable/fondo2"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/editTextNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Nombre" />
+
+                <EditText
+                    android:id="@+id/editTextApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Apellidos" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewSexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Sexo:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioHombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="10dp"
+                        android:text="Hombre" />
+
+                    <RadioButton
+                        android:id="@+id/radioMujer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="Mujer" />
+
+                    <RadioButton
+                        android:id="@+id/radioPrefieroNoDecirlo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Prefiero no decirlo" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewSituacionLaboral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Situación laboral:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="6">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSituacionLaboral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="10"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioEstudiante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_marginLeft="10dp"
+                        android:text="Estudiante" />
+
+                    <RadioButton
+                        android:id="@+id/radioTrabajador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_marginLeft="10dp"
+                        android:text="Trabajador" />
+
+                    <RadioButton
+                        android:id="@+id/radioParado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_marginLeft="10dp"
+                        android:text="Parado" />
+
+                    <RadioButton
+                        android:id="@+id/radioJubilado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_marginLeft="10dp"
+                        android:text="Jubilado" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewFechaNacimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Año de nacimiento:" />
+
+            <Spinner
+                android:id="@+id/spinnerAnnoNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnValidar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boton"
+            app:backgroundTint="@null"
+            android:textColor="@color/black"
+            android:text="Validar" />
+
+    </LinearLayout>
+
+</RelativeLayout>
